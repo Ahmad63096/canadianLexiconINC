@@ -129,10 +129,10 @@ function Message() {
                 timestamp: getTimestamp(),
                 id: getUniqueMessageId(),
                 buttons: [
-                  "Health Support Programs",
-                  "Education & Literacy Initiatives",
-                  "Cultural Revival Projects",
-                  "Community Development Efforts"
+                  "Health Support",
+                  "Education Initiatives",
+                  "Cultural Projects",
+                  "Community Development"
                 ],
               };
               setMessages((prevMessages) => [...prevMessages, buttonMessage]);
@@ -152,10 +152,10 @@ function Message() {
     resetTimers();
     startInactivityTimer();
     const buttonResponses = {
-      "Health Support Programs": "I want to know about Health Support Programs.",
-      "Education & Literacy Initiatives": "I want to know about Education & Literacy Initiatives.",
-      "Cultural Revival Projects": "I want to know about Cultural Revival Projects.",
-      "Community Development Efforts": "I want to know about Community Development Efforts."
+      "Health Support": "I want to know about Health Support.",
+      "Education Initiatives": "I want to know about Education Initiatives.",
+      "Cultural Projects": "I want to know about Cultural Projects.",
+      "Community Development": "I want to know about Community Development."
     };
     const responseMessage = buttonResponses[buttonText] || "Sorry, I didn't understand that.";
     sendMessage(responseMessage);
